@@ -65,21 +65,29 @@ const searchInput = document.getElementById("searchInput");
 const searchService = async (word) => {
   const response = await fetch("./js/serv-tram.json");
   const data = await response.json();
+
+  const results = new Set();
+
   data.forEach((item) => {
     item.ts.forEach((service) => {
       if (service.title.toLowerCase().includes(word.toLocaleLowerCase())) {
-        if (item.id === 0) {
-          createCardS1(service);
-        } else {
-          createCardS2(service);
-        }
+        results.add(service);
       }
     });
   });
+
+  results.forEach((result) => {
+    console.log(result.secret);
+    if (result.secret === "salud") {
+      createCardS1(result);
+    } else {
+      createCardS2(result);
+    }
+  });
+  results.clear();
 };
 
 searchInput.addEventListener("input", () => {
-  cards.innerHTML = '';
+  cards.innerHTML = "";
   searchService(searchInput.value);
-  
 });
