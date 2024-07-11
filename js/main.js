@@ -76,6 +76,9 @@ const searchService = async (word) => {
     });
   });
 
+  console.log("------------------")
+  console.log(results)
+
   results.forEach((result) => {
     console.log(result.secret);
     if (result.secret === "salud") {
