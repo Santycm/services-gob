@@ -79,14 +79,13 @@ const searchService = async (word) => {
   console.log("------------------")
   console.log(results)
 
-  results.forEach((result) => {
-    console.log(result.secret);
-    if (result.secret === "salud") {
-      createCardS1(result);
-    } else {
-      createCardS2(result);
+  for(let i=0; i<results.size; i++){
+    if(results[i].secret === "salud"){
+      createCardS1(results[i]);
+    }else{
+      createCardS2(results[i]);
     }
-  });
+  }
   results.clear();
 };
 
