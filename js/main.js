@@ -66,7 +66,7 @@ const searchService = async (word) => {
   const response = await fetch("./js/serv-tram.json");
   const data = await response.json();
 
-  const results = new Set();
+  
 
   data.forEach((item) => {
     item.ts.forEach((service) => {
@@ -86,6 +86,8 @@ const searchService = async (word) => {
   });
   results.clear();
 };
+
+const results = new Set();
 
 searchInput.addEventListener("input", () => {
   cards.innerHTML = "";
