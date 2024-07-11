@@ -66,30 +66,25 @@ const searchService = async (word) => {
   const response = await fetch("./js/serv-tram.json");
   const data = await response.json();
 
-  
+  let results = [];
 
   data.forEach((item) => {
     item.ts.forEach((service) => {
       if (service.title.toLowerCase().includes(word.toLocaleLowerCase())) {
-        results.add(service);
+        results.push(service)
       }
     });
   });
 
   console.log("------------------")
-  console.log(results)
-
-  for(let i=0; i<results.size; i++){
+  for(let i=0; i<results.length; i++){
     if(results[i].secret === "salud"){
-      createCardS1(results[i]);
+      createCardS1(results[i])
     }else{
       createCardS2(results[i]);
     }
   }
-  results.clear();
 };
-
-const results = new Set();
 
 searchInput.addEventListener("input", () => {
   cards.innerHTML = "";
