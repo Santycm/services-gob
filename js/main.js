@@ -67,6 +67,7 @@ const searchService = async (word) => {
   const data = await response.json();
 
   let results = [];
+  cards.innerHTML = "";
 
   data.forEach((item) => {
     item.ts.forEach((service) => {
@@ -84,9 +85,10 @@ const searchService = async (word) => {
       createCardS2(results[i]);
     }
   }
+  results = []
 };
 
-searchInput.addEventListener("input", () => {
-  cards.innerHTML = "";
+searchInput.addEventListener("input", function(){
+  
   searchService(searchInput.value);
 });
