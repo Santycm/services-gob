@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" <!--
-        tailwind -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" >
+    <!--tailwind -->
     <script src="./js/tailwind.js"></script>
     <script src="./js/tailwindConfig.js"></script>
     <link rel="stylesheet" href="css/style.css">
-    <!-- tailwind  -->
+    <!-- tailwind -->
     <title>Trámites y servicios</title>
 </head>
 
@@ -25,8 +25,7 @@
                     class="border-[1px] w-full focus:outline-none rounded-xl p-[10px] text-[15px] focus:border-principal"
                     placeholder="Buscar Trámite o Servicio" id="searchInput">
                 <button
-                    class="bg-principal grid items-center justify-center text-white p-[10px] rounded-xl hover:bg-hoverPrincipal transition-colors duration-300"
-                    onclick="viewResults()"><i class="fa-solid fa-magnifying-glass text-20px"></i></i></button>
+                    class="bg-principal grid items-center justify-center text-white p-[10px] rounded-xl hover:bg-hoverPrincipal transition-colors duration-300" id="searchBtn"><i class="fa-solid fa-magnifying-glass text-20px"></i></i></button>
             </section>
             <div class="w-full flex px-[15px] mb-[10px]">
                 <div class="h-[2px] w-[200px] bg-principal rounded-xl absolute "></div>
@@ -35,15 +34,14 @@
             <section class="px-[15px] grid gap-[5px]">
                 <div class="flex gap-[20px] w-full justify-between items-center">
                     <h2 class="font-bold text-principal">Nuestras secretarías:</h2>
-                    <button class="bg-second rounded-full py-[5px] px-[10px] text-black font-bold hover:bg-hoverSecond hidden" id="buttonShowAll" onclick="showAll()">Mostrar todo</button>
                 </div>
                 <section class="flex gap-[10px] flex-wrap items-center justify-center sm:justify-start ">
-                    <button onclick="filterResult(0)">
+                    <a>
                         <img src="img/btns/salud.svg" class="w-full ">
-                    </button>
-                    <button onclick="filterResult(1)">
+                    </a>
+                    <a href="secretariaPage.html">
                        <img src="img/btns/desarrollo social.svg" class="w-full">
-                    </button>
+                    </a>
 
 
 

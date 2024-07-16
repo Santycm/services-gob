@@ -101,26 +101,9 @@ searchInput.addEventListener("keydown", (e)=>{
   }
 })
 
-function viewResults(){
-  cards.scrollIntoView({behavior:'smooth'})
-}
+document.getElementById("searchBtn").addEventListener("click", ()=>{
+  cards.scrollIntoView({ behavior: "smooth" });
+})
 
-const filterResult = async(filter)=>{
-  const services = await loadServices();
-  cards.innerHTML = "";
-  services[filter].ts.forEach((item)=>{
-    if(filter===0){
-      createCardS1(item)
-    }else{
-      createCardS2(item)
-    }
-  })
-  document.getElementById("buttonShowAll").classList.remove("hidden");
-}
 
-const showAll = async()=>{
-  cards.innerHTML = "";
-  document.getElementById("buttonShowAll").classList.add("hidden");
-  const services = await loadServices();
-  loadAll(services);
-}
+
