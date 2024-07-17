@@ -6,10 +6,10 @@ const loadServices = async () => {
 
 window.addEventListener("load", async () => {
   const services = await loadServices();
-  loadAll(services)
+  loadAll(services);
 });
 
-const loadAll = (services)=>{
+const loadAll = (services) => {
   services.forEach((item) => {
     if (item.id === 0) {
       item.ts.map((service) => {
@@ -21,19 +21,19 @@ const loadAll = (services)=>{
       });
     }
   });
-}
+};
 
 const cards = document.getElementById("cards");
 
 //Estilo correspondiente a la secretaria de salud
 const createCardS1 = (service) => {
-  let card = document.createElement("ARTICLE");
+  let card = document.createElement("LI");
   card.setAttribute(
     "class",
     "relative flex border-[1px] border-gray-300 rounded-lg overflow-hidden hover:shadow-lg transition-all duration-500 group"
   );
   card.innerHTML = `
-        <div class="h-full w-[12px] group-hover:w-full absolute bg-principal transition-colors duration-700 transition-all"></div>
+        <div class="h-full w-[12px] group-hover:w-full absolute bg-principal duration-700 transition-all"></div>
             <section class="py-[20px] px-[10px] grid gap-[10px] w-full relative ml-[12px]">
                 <h3 class="text-[15px] line-clamp-2 font-semibold leading-tight group-hover:text-white">${service.title}</h3>
                     <section class="flex items-center gap-[10px]">
@@ -46,17 +46,17 @@ const createCardS1 = (service) => {
 };
 
 const createCardS2 = (service) => {
-  let card = document.createElement("ARTICLE");
+  let card = document.createElement("LI");
   card.setAttribute(
     "class",
     "relative flex border-[1px] border-gray-300 rounded-lg overflow-hidden hover:shadow-lg transition-all duration-500 group"
   );
   card.innerHTML = `
-        <div class="h-full w-[12px] group-hover:w-full absolute bg-second transition-colors duration-700 transition-all"></div>
+        <div class="h-full w-[12px] group-hover:w-full absolute bg-second duration-700 transition-all"></div>
             <section class="py-[20px] px-[10px] grid gap-[10px] w-full relative ml-[12px]">
                 <h3 class="text-[15px] line-clamp-2 font-semibold leading-tight">${service.title}</h3>
                     <section class="flex items-center gap-[10px]">
-                        <a href="${service.btn}" class="text-[10px] font-semibold bg-second group-hover:bg-white group-hover:text-black text-white hover:font-bold px-[10px] py-[6px] rounded-full">REALIZAR</a>
+                        <a href="${service.btn}" class="text-[10px] font-semibold bg-second group-hover:bg-white text-black hover:font-bold px-[10px] py-[6px] rounded-full">REALIZAR</a>
                         <a href="${service.link}" class="text-[12px] hover:font-bold">Conoce más</a>
                     </section>
             </section>
@@ -76,34 +76,31 @@ const searchService = async (word) => {
   data.forEach((item) => {
     item.ts.forEach((service) => {
       if (service.title.toLowerCase().includes(word.toLocaleLowerCase())) {
-        results.push(service)
+        results.push(service);
       }
     });
   });
 
-  for(let i=0; i<results.length; i++){
-    if(results[i].secret === "salud"){
-      createCardS1(results[i])
-    }else{
+  for (let i = 0; i < results.length; i++) {
+    if (results[i].secret === "salud") {
+      createCardS1(results[i]);
+    } else {
       createCardS2(results[i]);
     }
   }
-  results = []
+  results = [];
 };
 
-searchInput.addEventListener("input", function(){
+searchInput.addEventListener("input", function () {
   searchService(searchInput.value);
 });
 
-searchInput.addEventListener("keydown", (e)=>{
-  if(e.key==="Enter"){
+searchInput.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
     viewResults();
   }
-})
+});
 
-document.getElementById("searchBtn").addEventListener("click", ()=>{
+document.getElementById("searchBtn").addEventListener("click", () => {
   cards.scrollIntoView({ behavior: "smooth" });
-})
-
-
-
+});

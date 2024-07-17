@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <!--tailwind -->
     <script src="./js/tailwind.js"></script>
     <script src="./js/tailwindConfig.js"></script>
@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <main class="xl:px-[15%] sm:px-[10%] px-[5%] py-[5%] flex flex-col gap-[35px] items-center">
+    <main class="container mx-auto p-[5%] flex flex-col gap-[35px] items-center">
         <section class="w-full">
             <p>Encuentre aquí todos los trámites y servicios relacionados con la Alcaldía de
                 Girón.</p>
@@ -24,8 +24,9 @@
                 <input type="text"
                     class="border-[1px] w-full focus:outline-none rounded-xl p-[10px] text-[15px] focus:border-principal"
                     placeholder="Buscar Trámite o Servicio" id="searchInput">
-                <button
-                    class="bg-principal grid items-center justify-center text-white p-[10px] rounded-xl hover:bg-hoverPrincipal transition-colors duration-300" id="searchBtn"><i class="fa-solid fa-magnifying-glass text-20px"></i></i></button>
+                <button aria-label="button"
+                    class="bg-principal grid items-center justify-center text-white p-[10px] rounded-xl hover:bg-hoverPrincipal transition-colors duration-300"
+                    id="searchBtn"><i class="fa-solid fa-magnifying-glass text-20px"></i></i></button>
             </section>
             <div class="w-full flex px-[15px] mb-[10px]">
                 <div class="h-[2px] w-[200px] bg-principal rounded-xl absolute "></div>
@@ -36,11 +37,11 @@
                     <h2 class="font-bold text-principal">Nuestras secretarías:</h2>
                 </div>
                 <section class="flex gap-[10px] flex-wrap items-center justify-center sm:justify-start ">
-                    <a>
-                        <img src="img/btns/salud.svg" class="w-full ">
+                    <a href="salud.html">
+                        <img src="img/btns/salud.svg" class="w-full" alt="secretaria de salud">
                     </a>
-                    <a href="secretariaPage.html">
-                       <img src="img/btns/desarrollo social.svg" class="w-full">
+                    <a href="desarrolloSocial.html">
+                        <img src="img/btns/desarrollo social.svg" class="w-full" alt="secretaria de desarrollo social">
                     </a>
 
 

@@ -3,6 +3,7 @@ tailwind.config = {
   theme: {
     extend: {
       colors: {
+        gobColor:"#3366cc",
         principal: "#6d0205",
         second: "#f9b90e",
         third: "#edecec",

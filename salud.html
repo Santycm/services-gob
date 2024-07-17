@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- tailwind -->
+    <script src="./js/tailwind.js"></script>
+    <script src="./js/tailwindConfig.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- splide  -->
+    <link rel="stylesheet" href="./SplideSlider/splide.min.css" />
+    <!-- splide  -->
+    <!-- tailwind  -->
+    <title>Secretaría Local de Salud</title>
+</head>
+
+<body>
+    <header>
+        <!--! sec gob  -->
+        <section class="bg-gobColor px-6 py-2">
+            <figure class="lg:container mx-auto flex items-center justify-center lg:justify-start">
+                <a href="https://www.gov.co">
+                    <img src="./assets/img/logoGov.svg" class="w-32 object-contain" alt="Imagen gov.co" />
+                </a>
+            </figure>
+        </section>
+        <!--! sec gob  -->
+        <section class="w-full py-[10px] sm:px-[10%] px-[5%] flex justify-center">
+            <article class="container w-full flex gap-[10px] items-center">
+                <a href="index.html" class="grid">
+                    <img src="img/escudo.jpg" class="h-[120px] object-contain" alt="escudo alcaldia">
+                    <div class="flex font-bold text-[20px] items-center gap-[10px] justify-center">
+                        <i class="fa-solid fa-house"></i>
+                        <p>Inicio</p>
+                    </div>
+
+                </a>
+                <h2 class="lg:text-[30px] text-principal font-extrabold text-[20px]">Secretaría de Local de Salud
+                </h2>
+            </article>
+        </section>
+    </header>
+    <main>
+        <!--Slider home-->
+        <article class="slider__container w-full h-[300px] lg:h-[450px] text-white">
+            <section class="splide slider__home h-full relative flex justify-center items-end">
+                <section class="splide__track h-full">
+                    <!--Slider elements-->
+                    <ul class="splide__list">
+                        <a href="#" class="splide__slide">
+                            <img class="w-full h-full object-cover"
+                                src="https://images.pexels.com/photos/935979/pexels-photo-935979.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                                alt="Imagen 1" />
+                        </a>
+                        <a href="#" class="splide__slide">
+                            <img class="w-full h-full object-cover"
+                                src="https://images.pexels.com/photos/935979/pexels-photo-935979.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                                alt="Imagen 2" />
+                        </a>
+                        <a href="#" class="splide__slide">
+                            <img class="w-full h-full object-cover"
+                                src="https://images.pexels.com/photos/935979/pexels-photo-935979.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                                alt="Imagen 3" />
+                        </a>
+                        <a href="#" class="splide__slide">
+                            <img class="w-full h-full object-cover"
+                                src="https://images.pexels.com/photos/935979/pexels-photo-935979.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                                alt="Imagen 4" />
+                        </a>
+
+                        <a href="#" class="splide__slide">
+                            <img class="w-full h-full object-cover"
+                                src="https://images.pexels.com/photos/730564/pexels-photo-730564.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                                alt="Imagen 5" />
+                        </a>
+
+                        <a href="#" class="splide__slide">
+                            <img class="w-full h-full object-cover"
+                                src="https://images.pexels.com/photos/733856/pexels-photo-733856.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                                alt="Imagen 6" />
+                        </a>
+                    </ul>
+                    <!--Slider elements-->
+                </section>
+                <!--Slider controls-->
+                <article
+                    class="absolute flex items-center justify-center p-[10px] h-max w-max rounded-t-lg bg-black backdrop-blur-sm bg-opacity-20">
+                    <button
+                        class="splide__toggle !bottom-auto text-white uppercase text-[12px] lg:text-[1rem] h-full items-center font-bold"
+                        type="button">
+                        <span class="splide__toggle__play ">
+                            Iniciar
+                            <i class="fa-solid fa-play"></i>
+                        </span>
+                        <span class="splide__toggle__pause">
+                            Pausar
+                            <i class="fa-solid fa-pause"></i>
+                        </span>
+                    </button>
+                    <ul class="splide__pagination relative !bottom-auto z-0"></ul>
+                </article>
+                <!--Slider controls-->
+            </section>
+        </article>
+        <!--Slider home-->
+        <section class="grid items-center justify-center px-[5%] lg:px-[15%]">
+            <article class=" container py-[5%] flex flex-col gap-[15px]">
+                <section class="bg-second rounded-xl flex justify-between items-center p-[10px]">
+                    <h2 class="font-extrabold text-[30px] p-[10px]">¡Girón para todos!</h2>
+                    <div class="w-[80px] h-[80px] rounded-full bg-white flex items-center justify-center">
+                        <img src="img/icons/gobierno.png" class="w-[50px]" alt="icono gobierno">
+                    </div>
+                </section>
+                <section class="mx-[10px]">
+                    <p class="text-justify">Encuentre aquí todos los trámites y servicios relacionados con la
+                        <b>Secretaría
+                            Local de Salud</b> de la Alcaldía de Girón
+                    </p>
+                </section>
+                <ul class="grid grid-cols-2 sm:grid-cols-4 gap-[10px] listCards" id="cards">
+                </ul>
+            </article>
+        </section>
+
+        <section class="bg-principal grid items-center justify-center px-[5%] lg:px-[15%]">
+            <article class="w-full container py-[10%] flex flex-col gap-[20px]">
+                <h2 class="text-white text-[30px] font-extrabold">NOTICIAS</h2>
+                <article class="grid sm:grid-cols-3 w-full overflow-hidden rounded-lg h-full">
+                    <figure class="relative sm:h-full h-[200px] sm:col-span-2">
+                        <img src="https://cloudfront-eu-central-1.images.arcpublishing.com/prisa/DFI253WA7ROB7FRITGTA2DXOOU.jpg"
+                            alt="imagen relacionada con la noticia" class="absolute object-cover w-full h-full">
+                        <section class="bg-second font-semibold p-[10px] w-max relative">
+                            <p>Julio 17 de 2024</p>
+                        </section>
+
+                    </figure>
+                    <figcaption class="bg-white  p-[20px] grid gap-[20px] sm:col-span-1 w-full">
+
+                        <h3 class="line-clamp-2 font-semibold text-[20px]">Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Vitae expedita
+                            inventore facere.</h3>
+                        <p class="sm:line-clamp-6 line-clamp-3 text-justify">Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Et, quas.
+                            Sapiente nesciunt debitis, numquam est veritatis temporibus aperiam suscipit dicta autem
+                            soluta.
+                            Quis fugiat est odit incidunt accusantium. Porro distinctio saepe natus tempore, mollitia
+                            consectetur tenetur soluta ab, animi nulla voluptates recusandae ex eius modi?</p>
+                        <a href=""
+                            class="bg-second p-[10px] rounded-md w-max font-bold hover:bg-hoverSecond transition-all duration-500 hover:text-white">CONOCE
+                            MÁS</a>
+                    </figcaption>
+                </article>
+                <section class="grid sm:grid-cols-4 grid-cols-2 gap-[15px]">
+                    <article class="bg-white overflow-hidden rounded-lg">
+                        <figure class=""">
+                                    <img src="
+                            https://cloudfront-eu-central-1.images.arcpublishing.com/prisa/DFI253WA7ROB7FRITGTA2DXOOU.jpg"
+                            alt="imagen relacionada con la noticia" class="object-cover w-full h-full">
+                            <section class="bg-second font-semibold p-[10px] w-max relative">
+                                <p>Julio 17 de 2024</p>
+                            </section>
+
+                        </figure>
+                        <figcaption class="bg-white  p-[20px] grid gap-[20px] sm:col-span-1 w-full">
+
+                            <h3 class="line-clamp-3 font-semibold text-[20px]">Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Vitae expedita
+                                inventore facere.</h3>
+
+                            <a href=""
+                                class="bg-second p-[10px] rounded-md w-max font-bold hover:bg-hoverSecond transition-all duration-500 hover:text-white">CONOCE
+                                MÁS</a>
+                        </figcaption>
+                    </article>
+                    <article class="bg-white overflow-hidden rounded-lg">
+                        <figure class=""">
+                                                    <img src="
+                            https://cloudfront-eu-central-1.images.arcpublishing.com/prisa/DFI253WA7ROB7FRITGTA2DXOOU.jpg"
+                            alt="imagen relacionada con la noticia" class="object-cover w-full h-full">
+                            <section class="bg-second font-semibold p-[10px] w-max relative">
+                                <p>Julio 17 de 2024</p>
+                            </section>
+
+                        </figure>
+                        <figcaption class="bg-white  p-[20px] grid gap-[20px] sm:col-span-1 w-full">
+
+                            <h3 class="line-clamp-3 font-semibold text-[20px]">Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Vitae expedita
+                                inventore facere.</h3>
+
+                            <a href=""
+                                class="bg-second p-[10px] rounded-md w-max font-bold hover:bg-hoverSecond transition-all duration-500 hover:text-white">CONOCE
+                                MÁS</a>
+                        </figcaption>
+                    </article>
+                    <article class="bg-white overflow-hidden rounded-lg">
+                        <figure class=""">
+                                                    <img src="
+                            https://cloudfront-eu-central-1.images.arcpublishing.com/prisa/DFI253WA7ROB7FRITGTA2DXOOU.jpg"
+                            alt="imagen relacionada con la noticia" class="object-cover w-full h-full">
+                            <section class="bg-second font-semibold p-[10px] w-max relative">
+                                <p>Julio 17 de 2024</p>
+                            </section>
+
+                        </figure>
+                        <figcaption class="bg-white  p-[20px] grid gap-[20px] sm:col-span-1 w-full">
+
+                            <h3 class="line-clamp-3 font-semibold text-[20px]">Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Vitae expedita
+                                inventore facere.</h3>
+
+                            <a href=""
+                                class="bg-second p-[10px] rounded-md w-max font-bold hover:bg-hoverSecond transition-all duration-500 hover:text-white">CONOCE
+                                MÁS</a>
+                        </figcaption>
+                    </article>
+                    <article class="bg-white overflow-hidden rounded-lg">
+                        <figure class=""">
+                                                    <img src="
+                            https://cloudfront-eu-central-1.images.arcpublishing.com/prisa/DFI253WA7ROB7FRITGTA2DXOOU.jpg"
+                            alt="imagen relacionada con la noticia" class="object-cover w-full h-full">
+                            <section class="bg-second font-semibold p-[10px] w-max relative">
+                                <p>Julio 17 de 2024</p>
+                            </section>
+
+                        </figure>
+                        <figcaption class="bg-white  p-[20px] grid gap-[20px] sm:col-span-1 w-full">
+
+                            <h3 class="line-clamp-3 font-semibold text-[20px]">Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Vitae expedita
+                                inventore facere.</h3>
+
+                            <a href=""
+                                class="bg-second p-[10px] rounded-md w-max font-bold hover:bg-hoverSecond transition-all duration-500 hover:text-white">CONOCE
+                                MÁS</a>
+                        </figcaption>
+                    </article>
+                </section>
+                <button
+                    class="bg-second w-full p-[15px] font-bold rounded-lg text-[20px] hover:bg-hoverSecond transition-all duration-500 hover:text-white">VER
+                    MÁS NOTICIAS</button>
+            </article>
+        </section>
+
+        <section class="grid items-center justify-center px-[5%] lg:px-[15%] py-[5%]">
+            <article class="container  flex flex-col gap-[15px]">
+                <section class="bg-second rounded-xl flex justify-between items-center p-[10px]">
+                    <h2 class="font-extrabold text-[30px] p-[10px]">Galería de vídeos</h2>
+                    <div class="w-[80px] h-[80px] rounded-full bg-white flex items-center justify-center">
+                        <img src="img/icons/video.png" class="w-[50px]" alt="icono video">
+                    </div>
+                </section>
+                <section class="grid sm:grid-cols-6 gap-[10px] w-full h-max">
+                    <article class="flex flex-col sm:col-span-4 h-max gap-[10px]">
+                        <iframe class="w-full rounded-lg shadow-2xl h-[320px]"
+                            src="https://www.youtube.com/embed/eg82nO4EfC8?si=bVEfU4sZKeSHG8-d"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <section class="flex flex-col w-full h-full justify-between p-[15px] gap-[20px]">
+                            <article>
+                                <h2 class="text-[25px] font-semibold">Conoce Girón Santander</h2>
+                                <p class="line-clamp-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero,
+                                    accusamus assumenda? Culpa,
+                                    veritatis. Esse facilis iusto maxime doloribus ad incidunt, tempore quidem nihil
+                                    impedit.
+                                    Illo, placeat cum? Distinctio fugiat fugit magni magnam corrupti, quasi molestias
+                                    consequuntur consequatur impedit doloremque porro?</p>
+                            </article>
+                            <section class="flex gap-[12px]">
+                                <a href=""
+                                    class="bg-black hover:bg-principal transition-all duration-500 shadow-xl rounded-lg  sm:w-[220px] text-white  flex gap-[10px] p-[10px] items-center">
+                                    <div class="w-[50px] h-[50px] bg-white rounded-full overflow-hidden">
+                                        <img src="https://radionacional-v3.s3.amazonaws.com/s3fs-public/styles/portadas_relaciona_4_3/public/senalradio/articulo-noticia/galeriaimagen/whatsapp_image_2019-11-20_at_2.46.32_pm.jpeg?h=63ccb8c4&itok=yPf2UhNF" class="object-cover w-full h-full" alt="foto de perfil">
+                                    </div>
+                                    <div>
+                                        <p class="font-semibold">Alcaldía de Girón</p>
+                                        <p class="text-[10px]">539 Suscriptores</p>
+                                    </div>
+                                </a>
+                                <a href=""
+                                    class="bg-black hover:bg-principal transition-all shadow-xl rounded-lg  sm:w-[220px]  flex gap-[10px] p-[10px] items-center group">
+                                    <div
+                                        class="flex items-center justify-center w-[50px] h-[50px] bg-white rounded-full">
+                                        <i class="fa-solid fa-play text-[30px] group-hover:text-principal transition-all"></i></div>
+                                    <div>
+                                        <p class="font-semibold text-white ">Ver más vídeos</p>
+                                    </div>
+                                </a>
+                            </section>
+
+                        </section>
+                    </article>
+                    <ul class="flex flex-col sm:col-span-2 gap-[10px] w-full h-max">
+                        <li>
+                            <a href=""
+                                class="grid grid-cols-3 bg-black text-white h-max items-center overflow-hidden rounded-md w-full">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQB_JRkmCZSU95_G6O_n87k1mR532ql3vwyTw&s"
+                                    alt="miniatura video" class="col-span-1 rounded-md h-full w-full">
+                                <section class="col-span-2 p-[10px]">
+                                    <h3 class="line-clamp-1 text-[14px] font-semibold">Lorem ipsum dolor sit, amet
+                                        consectetur
+                                        adipisicing elit.</h3>
+                                    <p class="text-[10px]">Alcaldía de Girón</p>
+                                    <p class="text-[10px] font-extralight">6.9K vistas · hace 1 semana</p>
+                                </section>
+                            </a>
+                        </li>
+                        <li>
+                            <a href=""
+                                class="grid grid-cols-3 bg-black text-white h-max items-center overflow-hidden rounded-md w-full">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQB_JRkmCZSU95_G6O_n87k1mR532ql3vwyTw&s"
+                                    alt="miniatura video" class="col-span-1 rounded-md h-full w-full">
+                                <section class="col-span-2 p-[10px]">
+                                    <h3 class="line-clamp-1 text-[14px] font-semibold">Lorem ipsum dolor sit, amet
+                                        consectetur
+                                        adipisicing elit.</h3>
+                                    <p class="text-[10px]">Alcaldía de Girón</p>
+                                    <p class="text-[10px] font-extralight">6.9K vistas · hace 1 semana</p>
+                                </section>
+                            </a>
+                        </li>
+                        <li>
+                            <a href=""
+                                class="grid grid-cols-3 bg-black text-white h-max items-center overflow-hidden rounded-md w-full">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQB_JRkmCZSU95_G6O_n87k1mR532ql3vwyTw&s"
+                                    alt="miniatura video" class="col-span-1 rounded-md h-full w-full">
+                                <section class="col-span-2 p-[10px]">
+                                    <h3 class="line-clamp-1 text-[14px] font-semibold">Lorem ipsum dolor sit, amet
+                                        consectetur
+                                        adipisicing elit.</h3>
+                                    <p class="text-[10px]">Alcaldía de Girón</p>
+                                    <p class="text-[10px] font-extralight">6.9K vistas · hace 1 semana</p>
+                                </section>
+                            </a>
+                        </li>
+                        <li>
+                            <a href=""
+                                class="grid grid-cols-3 bg-black text-white h-max items-center overflow-hidden rounded-md w-full">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQB_JRkmCZSU95_G6O_n87k1mR532ql3vwyTw&s"
+                                    alt="miniatura video" class="col-span-1 rounded-md h-full w-full">
+                                <section class="col-span-2 p-[10px]">
+                                    <h3 class="line-clamp-1 text-[14px] font-semibold">Lorem ipsum dolor sit, amet
+                                        consectetur
+                                        adipisicing elit.</h3>
+                                    <p class="text-[10px]">Alcaldía de Girón</p>
+                                    <p class="text-[10px] font-extralight">6.9K vistas · hace 1 semana</p>
+                                </section>
+                            </a>
+                        </li>
+                        <li>
+                            <a href=""
+                                class="grid grid-cols-3 bg-black text-white h-max items-center overflow-hidden rounded-md w-full">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQB_JRkmCZSU95_G6O_n87k1mR532ql3vwyTw&s"
+                                    alt="miniatura video" class="col-span-1 rounded-md h-full w-full">
+                                <section class="col-span-2 p-[10px]">
+                                    <h3 class="line-clamp-1 text-[14px] font-semibold">Lorem ipsum dolor sit, amet
+                                        consectetur
+                                        adipisicing elit.</h3>
+                                    <p class="text-[10px]">Alcaldía de Girón</p>
+                                    <p class="text-[10px] font-extralight">6.9K vistas · hace 1 semana</p>
+                                </section>
+                            </a>
+                        </li>
+                        <li>
+                            <a href=""
+                                class="grid grid-cols-3 bg-black text-white h-max items-center overflow-hidden rounded-md w-full">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQB_JRkmCZSU95_G6O_n87k1mR532ql3vwyTw&s"
+                                    alt="miniatura video" class="col-span-1 rounded-md h-full w-full">
+                                <section class="col-span-2 p-[10px]">
+                                    <h3 class="line-clamp-1 text-[14px] font-semibold">Lorem ipsum dolor sit, amet
+                                        consectetur
+                                        adipisicing elit.</h3>
+                                    <p class="text-[10px]">Alcaldía de Girón</p>
+                                    <p class="text-[10px] font-extralight">6.9K vistas · hace 1 semana</p>
+                                </section>
+                            </a>
+                        </li>
+                        <li>
+                            <a href=""
+                                class="grid grid-cols-3 bg-black text-white h-max items-center overflow-hidden rounded-md w-full">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQB_JRkmCZSU95_G6O_n87k1mR532ql3vwyTw&s"
+                                    alt="miniatura video" class="col-span-1 rounded-md h-full w-full">
+                                <section class="col-span-2 p-[10px]">
+                                    <h3 class="line-clamp-1 text-[14px] font-semibold">Lorem ipsum dolor sit, amet
+                                        consectetur
+                                        adipisicing elit.</h3>
+                                    <p class="text-[10px]">Alcaldía de Girón</p>
+                                    <p class="text-[10px] font-extralight">6.9K vistas · hace 1 semana</p>
+                                </section>
+                            </a>
+                        </li>
+
+
+                    </ul>
+
+
+                </section>
+
+            </article>
+        </section>
+
+        <!--! Banner envia tu correo-->
+        <section class="w-full h-auto m-auto flex flex-col lg:container items-center justify-center  mt-16">
+            <figure class="w-full">
+                <img src="./assets/img/banner-envia-tu-correo.png" alt="banner envia tu correo" class="w-full h-full object-cover">
+            </figure>
+            <div class="h-12 w-full bg-primaryColor">
+
+            </div>
+        </section>
+        <!-- ! Mapa-->
+        <section class="w-full lg:container mx-auto mb-20">
+
+
+            <!--!Ahora si el mapa-->
+            <section class="w-full">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.1737480225315!2d-75.58155728766567!3d6.240817926354038!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4429afa96f2347%3A0xdcc43fd6f4a16cf7!2s1cero1%20Software!5e0!3m2!1ses-419!2sco!4v1708542875949!5m2!1ses-419!2sco"
+                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade" title="google maps"></iframe>
+
+            </section>
+            <!--!Ahora si el mapa-->
+        </section>
+        <!--! End Mapa-->
+
+    </main>
+
+    <!--!! footer  -->
+    <footer class="flex flex-col">
+        <!--!! sec info  -->
+        <section class="bg-principal px-6 flex flex-col gap-6">
+            <!--!! info alcaldia  -->
+            <article
+                class="lg:container mx-auto bg-white border rounded-md transform translate-y-[-30px] lg:translate-y-[-2rem] px-10 py-10 lg:py-20 shadow-md grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-6 w-full lg:w-[90%]">
+                <!--!! sec 1 información alcaldía -->
+                <div class="col-span-1 lg:col-span-2 flex flex-col gap-4 order-2 lg:order-1">
+                    <!--!! titulo  -->
+                    <h2 class="text-principal font-semibold text-lg">
+                        Alcaldía Municipal de Tualcaldia, Departamento
+                    </h2>
+                    <!--!! información  -->
+                    <article class="flex flex-col gap-3 text-[0.9rem]">
+                        <p class="font-normal">
+                            Dirección: Cra. 10 #9-74, Tualcaldia - Departamento, Colombia.
+                        </p>
+                        <p class="font-normal">Código Postal: 764001</p>
+                        <p class="font-normal">
+                            Horario: Lunes a viernes de 8:00 a.m. a 12 m. y de 2:00 p.m. a
+                            6:00 p.m.
+                        </p>
+                        <p class="font-normal">Teléfono conmutador: (+57) 2 519 0969</p>
+                        <p class="font-normal">
+                            Correo institucional:
+                            <a href="mailto:contactenos@Tualcaldia.gov.co"
+                                class="underline font-semibold text-blueTitle inline-block w-full overflow-x-hidden">contactenos@Tualcaldia.gov.co</a>
+                        </p>
+                        <p class="font-normal">
+                            Correo de Notificaciones Judiciales:
+                            <a href="mailto:notificacionjudicial@Tualcaldia.gov.co"
+                                class="underline inline-block w-full overflow-x-hidden text-blueTitle font-semibold">
+                                notificacionjudicial@Tualcaldia.gov.co</a>
+                        </p>
+                    </article>
+                </div>
+
+                <!--!! sec 2 logos alcaldia  -->
+                <div class="col-span-1 flex gap-3 justify-center order-1 lg:order-2">
+                    <img src="./assets/img/Escudo_de_Colombia.png" alt="Escudo de la república de Colombia"
+                        class="w-14 h-14 lg:w-[5rem] lg:h-[5rem] object-contain" />
+                    <img src="./assets/img/logo-alcaldia-removebg-preview.png"
+                        alt="Escudo del municipio de Alcaldía de Tualcaldia"
+                        class="w-14 h-14 lg:w-[5rem] lg:h-[5rem] object-contain" />
+                </div>
+                <!--!! sec 3 redes alcaldia -->
+                <div class="col-span-1 lg:col-span-3 order-3 flex flex-wrap gap-6 lg:gap-16">
+                    <div class="flex gap-3 items-center">
+                        <span class="bg-principal text-white rounded-full flex justify-center items-center p-2 lg:p-3">
+                            <i class="fab fa-facebook facebook-icon"></i></span>
+                        <a href="#" target="_blank" class="hover:underline text-principal font-semibold">@Entidad</a>
+                    </div>
+                    <div class="flex gap-3 items-center">
+                        <span class="bg-principal text-white rounded-full flex justify-center items-center p-2 lg:p-3">
+                            <i class="fab fa-instagram facebook-icon"></i></span>
+                        <a href="#" target="_blank" class="hover:underline text-principal font-semibold">@Entidad</a>
+                    </div>
+                    <div class="flex gap-3 items-center">
+                        <span class="bg-principal text-white rounded-full flex justify-center items-center p-2 lg:p-3">
+                            <i class="fab fa-twitter facebook-icon"></i></span>
+                        <a href="#" target="_blank" class="hover:underline text-principal font-semibold">@Entidad</a>
+                    </div>
+                    <div class="flex gap-3 items-center">
+                        <span class="bg-principal text-white rounded-full flex justify-center items-center p-2 lg:p-3">
+                            <i class="fab fa-youtube facebook-icon"></i></span>
+                        <a href="#" target="_blank" class="hover:underline text-principal font-semibold">@Entidad</a>
+                    </div>
+                </div>
+
+                <!--!! sec 4 metricas sitio -->
+                <div class="col-span-1 lg:col-span-3 order-4 flex flex-wrap gap-6">
+                    <h3 class="font-semibold text-[14px]">
+                        Última Actualización:
+                        <span id="lblDateSystem" class="font-normal"></span>
+                    </h3>
+                </div>
+                <!--!!sec 5 secciones de sitio  -->
+                <div class="col-span-1 lg:col-span-3 order-5 flex flex-wrap gap-6 lg:gap-10">
+                    <a href="#" class="underline text-principal text-[1rem]">Políticas</a>
+                    <a href="#" class="underline text-principal text-[1rem]">Mapas del sitio</a>
+                    <a href="#" class="underline text-principal text-[1rem]">Términos y condiciones</a>
+                    <a href="#" class="underline text-principal text-[1rem]">Accesibilidad</a>
+                </div>
+            </article>
+            <!--!! info 1cero1 -->
+            <article class="flex justify-center gap-3 pb-10">
+                <h3 class="text-white">Desarrollado por:</h3>
+                <img src="./assets/img/logo_101_software_white.png" class="w-[8rem]" alt="" />
+            </article>
+        </section>
+
+        <!--!! sec gob  -->
+        <section class="bg-gobColor px-6">
+            <article class="lg:container mx-auto flex justify-center lg:justify-start py-3 gap-3">
+                <img src="./assets/img/logofooter.png" class="w-[3rem]" alt="" />
+                <div class="h-auto w-[1px] bg-white"></div>
+                <img src="./assets/img/logoGov.svg" class="w-[8rem]" alt="" />
+            </article>
+        </section>
+    </footer>
+
+    <!--!! footer  -->
+    <!-- splide  -->
+    <script src="./SplideSlider/splide.min.js"></script>
+    <!-- splide  -->
+    <!-- main  -->
+    <script src="./js/mainSP2.js" defer></script>
+    <!-- main  -->
+</body>
+
+</html>
